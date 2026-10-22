@@ -5,11 +5,19 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.27.5] - 2026-10-22
+
+### Changed
+
+- **The old account name is gone from the program and its files.** The changelog (which is built into the program and shown in Release Notes), the NVDA add-on's source and the project's documents no longer carry the previous GitHub account name; the author is Deenadayalan Moodley throughout.
+
+---
+
 ## [2.27.4] - 2026-10-22
 
 ### Changed
 
-- **ScanMaster now lives on a new GitHub account.** The project's repositories moved from `DeenadayalanMoodley` to `DeenadayalanMoodley` (`DeenadayalanMoodley/ScanMaster-releases` holds the releases and the issues). The update check, the release-notes refresh, the downloads of the optional voice and Docling add-ons, Help > Report a Bug and the web addresses in the installer and the About box now use the new address directly. Copies installed before this version keep updating through GitHub's redirect, so they will find this release. Also fixed: Release Notes > Refresh from GitHub always came back empty, because the changelog was never published where it looks (the releases repository held only a README); the changelog is now published there with every release.
+- **ScanMaster now lives on a new GitHub account.** The project's repositories moved to a new GitHub account, `DeenadayalanMoodley` (`DeenadayalanMoodley/ScanMaster-releases` holds the releases and the issues). The update check, the release-notes refresh, the downloads of the optional voice and Docling add-ons, Help > Report a Bug and the web addresses in the installer and the About box now use the new address directly. Copies installed before this version keep updating through GitHub's redirect, so they will find this release. Also fixed: Release Notes > Refresh from GitHub always came back empty, because the changelog was never published where it looks (the releases repository held only a README); the changelog is now published there with every release.
 
 ---
 
@@ -2932,7 +2940,7 @@ everything from the 2.22.0 betas; the changes since beta.32 are below.
 - **Auto-updater still returned 404.** The source repo is private; the
   GitHub REST API returns 404 to anonymous HTTP for private repos, so
   the in-app updater literally could not see any release. The updater
-  now points at a public mirror repo (`DeenadayalanMoodley/ScanMaster-releases`)
+  now points at a public mirror repo (`ScanMaster-releases`)
   that holds release tags + assets only.
 - **Outline / Contents tree lost focus on arrow keys.** `ScrollToHeading`
   set the editor's `CaretPosition`, which forces focus into the
@@ -4674,7 +4682,7 @@ in over your existing one.)
 - Continuous document view (`View > Continuous Document`; `Ctrl+Alt+V`) — all pages in one scrollable control with `═══ Page N ═══` separators
 - Cursor-at-page-start fix: `SetInsertionPoint(0)` after each page load
 - Splash screen drawn programmatically with `wx.MemoryDC`
-- Copyright updated to Deenadayalan Moodley; DeenadayalanMoodley references removed
+- Copyright updated to Deenadayalan Moodley; old author-name references removed
 - Copyright footer added to all help HTML files
 
 ---
