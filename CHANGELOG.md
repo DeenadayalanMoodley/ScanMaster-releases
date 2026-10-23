@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.27.7] - 2026-10-23
+
+### Fixed
+
+- **Menu bar cut off on a screen scaled to 150%.** The words of the menu bar (File, Edit, View...) were cut off at the bottom and right, and the toolbars sat over them. The cause: the program did not tell Windows how it handles screen scaling until its editor started, so the menu bar was made while Windows still treated the program as unscaled, and measured it for 100% (19 pixels high, where 150% needs 29). The program now says it is scaling-aware first thing, before any menu or window exists, and the log records it (a "[Frame] at start the program was DPI-unaware" line). Nothing changes at 100%.
+
+---
+
 ## [2.27.6] - 2026-10-23
 
 ### Fixed
