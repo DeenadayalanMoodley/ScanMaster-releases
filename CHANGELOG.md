@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.27.8] - 2026-10-23
+
+### Removed
+
+- **File > Export As is gone.** It did what Save As does (the same window, the same formats); the only difference was that the open document stayed on its original file. To keep a copy, save the document under another name with Save As. The Keyboard Manager no longer lists it, and Help says so.
+
+---
+
 ## [2.27.7] - 2026-10-23
 
 ### Fixed
