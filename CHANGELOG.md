@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.27.6] - 2026-10-23
+
+### Fixed
+
+- **Tables are now read in Save as Audio.** A table was skipped when a document was saved as an audio file, so a book's table of contents (which many books hold as a table, such as the Project Gutenberg book `pg50400-images-3.smdx`) was missing from the recording. Each row is now read as one sentence, with a comma between the cells (for example "CHAPTER ONE, Wings of the Brave."), in every format and split mode. Talking books already did this. The Help topic Speech and Navigation says so.
+
+---
+
 ## [2.27.5] - 2026-10-22
 
 ### Changed
