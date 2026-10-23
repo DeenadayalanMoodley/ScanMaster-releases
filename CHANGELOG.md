@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.27.9] - 2026-10-23
+
+### Fixed
+
+- **Dialogs cut off their text on a screen scaled above 100%.** On a 150% screen the Check for Updates window hid its first line behind the release notes, and its controls were too small for their words. Every window was laid out for 100% while its text was drawn at the screen's scale. Now every control's size and position, and each window's margin, are scaled to the screen's setting as the window is made (at 100% nothing changes). This covers all dialogs, including Find, Header and Footer and Preferences. I could only test it at 100%, so please tell me about any window that still looks wrong at 125% or 150%.
+
+---
+
 ## [2.27.8] - 2026-10-23
 
 ### Removed
