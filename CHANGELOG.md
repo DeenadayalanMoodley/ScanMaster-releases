@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.30.1] - 2026-10-26
+
+### Fixed
+
+- **Explore Equation now goes through the equation one symbol at a time.** Right and Left moved between whole parts (a whole fraction, a whole root), so you could not tell what was inside the equation. They now move to each number, letter and sign in the order they are written, saying where a fraction, root or power starts and ends (for the quadratic formula: "is equal to", "in numerator; minus", "b", "plus or minus", "in root; in base; b", "in superscript; 2", ...). Home and End go to the first and last symbol, Ctrl+Shift+Up reads the whole equation, and Shift+Up or Shift+Down change to moving by parts, as before.
+
+---
+
 ## [2.30.0] - 2026-10-26
 
 ### Added
