@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.28.1] - 2026-10-26
+
+### Fixed
+
+- **Equations in Word documents, checked in Word itself.** Eleven varied equations (fractions, roots, sums, integrals, matrices, accents, limits, scripts) were saved by ScanMaster and opened in Word, which read every one as a real Word equation of the right kind. That check found three faults, now fixed: an **overline** (`\overline{AB}`) was stored with an underline character, so it drew and was spoken as an underline; it is now an overline, and Word gets a real overbar (and underbar) instead of a loose character; and a **brace over or under** an expression is now Word's own group character rather than an accent with a stray symbol.
+
+---
+
 ## [2.28.0] - 2026-10-26
 
 ### Fixed
