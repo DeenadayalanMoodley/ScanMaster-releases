@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.31.0] - 2026-10-26
+
+### Changed
+
+- **Explore Equation reworked to work as in NVDA and JAWS.** Moving onto an equation with the arrow keys now says "Equation" and then the equation, and moving off it says "Out of equation". In Explore Equation: Left and Right move one symbol at a time through the whole equation, saying where a fraction, root or power starts and ends. **Down** goes into the part you are in (a numerator, what is under a root, a power); from then on the symbols only move inside that part, saying "end of numerator" at its edge, and **Up** comes back out. **Ctrl+Right** and **Ctrl+Left** move from element to element at the level you are on and read each element in full, going on to the next part (numerator to denominator) at the end; Left and Right then read it symbol by symbol. Space reads the symbol, R the part you are in, W the whole equation. Escape says "Left the equation". The movement is now done by ScanMaster itself, with MathCAT saying each symbol or part and giving its braille, so it no longer depends on MathCAT's own navigation modes.
+
+---
+
 ## [2.30.1] - 2026-10-26
 
 ### Fixed
