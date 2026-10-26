@@ -5,6 +5,15 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.30.0] - 2026-10-26
+
+### Added
+
+- **Type equations in Word's linear format.** The Insert Equation window has two radio buttons, **LaTeX** and **Linear (as in Word)**. Linear is the text Word uses for its linear equations (UnicodeMath), for example `x=(-b±√(b^2-4ac))/2a` or `∑_(i=1)^n▒i`; fractions, scripts, roots, sums and integrals, matrices, lines and braces, `\alpha`-style names and quoted text are understood. "Spoken as" keeps checking what you type. LaTeX turns into linear text when you switch; linear text can't be turned back into LaTeX, so the LaTeX box is cleared after linear changes (and the window says so). The format you used last is remembered.
+- **Equations from other documents can now be edited.** An equation that came from Word or the web has no LaTeX, so Edit Equation used to say to type it again. It now opens in the linear format, showing the equation as text you can change.
+
+---
+
 ## [2.29.0] - 2026-10-26
 
 ### Added
