@@ -5,6 +5,19 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.31.4] - 2026-10-26
+
+### Changed
+
+- **PDF imports now make tables.** Three or more rows of figures with the same number of columns (with a row of column names above them, if there is one) are imported as a real table with a header row, so you can move through it by cell. This works for text-layer and scanned-page imports.
+
+### Fixed
+
+- **A PDF whose text layer is damaged is now treated as scanned.** Some PDFs carry a hidden text layer that is only noise (broken font encoding). ScanMaster counted it as real text, so "Text extraction only" or Auto imported junk. Such pages are now recognised as image-only, so the import dialog defaults to OCR for them and Auto reads them by OCR.
+- Short lines of noise are no longer turned into headings; only short lines of capital letters are.
+
+---
+
 ## [2.31.3] - 2026-10-26
 
 ### Changed
