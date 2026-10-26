@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.31.1] - 2026-10-26
+
+### Changed
+
+- **Explore Equation now works as it does in NVDA and JAWS.** After looking at how NVDA's MathCAT add-on and JAWS's Math Viewer do it, the version in 2.31.0 (a walk through every symbol, and Ctrl+arrows between elements) is gone, and the real keys are used. It starts one level in; **Left** and **Right** move between the parts at the level you are on and never leave the part you are in ("end of math" at its edge); **Down** zooms into a part (numerator, root, power), **Up** zooms out, **Ctrl+Shift+Down** and **Ctrl+Shift+Up** go all the way in or out; **Shift+Down** and **Shift+Up** change the step between Enhanced (parts of the mathematics), Simple (words) and Character (words or numbers, with Down to reach each letter or digit); **Space** reads, **Enter** says where you are, **Shift+Left/Right** read without moving, **Home**/**End**, **Backspace** (back), **1-0** (place markers), **Ctrl+arrows** (table cells). **Escape** leaves; Enter no longer does. The step to start with is a new setting, **Preferences > Speech > Mathematics > Explore equations by**. Entering and leaving an equation are still announced ("Equation", "Out of equation").
+
+---
+
 ## [2.31.0] - 2026-10-26
 
 ### Changed
