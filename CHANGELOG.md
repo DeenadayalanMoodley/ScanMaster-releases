@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.31.2] - 2026-10-26
+
+### Fixed
+
+- **Importing a PDF with "Text extraction only" no longer crashes ScanMaster.** Importing a PDF that has a text layer closed the program at once, both when you chose Text extraction only and when Auto found every page had text, which is also the method the dialog picks for such a PDF. This had been so since 2.22.0. Text extraction now imports as intended. Found by the 2.30.0 audit.
+
+---
+
 ## [2.31.1] - 2026-10-26
 
 ### Changed
