@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.31.5] - 2026-10-26
+
+### Changed
+
+- **The Import PDF dialog now says what the chosen method keeps.** A line under the options tells you, for each method, whether headings, tables and equations are kept, and which engines to pick for equations (Mathpix, Mistral, Datalab). The help for the import methods describes the same.
+
+---
+
 ## [2.31.4] - 2026-10-26
 
 ### Changed
