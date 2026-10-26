@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.32.0] - 2026-10-26
+
+### Added
+
+- **A local equation reader for PDFs and scans.** The Import PDF dialog has a new method, **Equations (local, slow: reads formulas as LaTeX)**. It finds the headings, paragraphs and equations on each page, reads the text, and turns every equation into a real equation, which Explore Equation, speech and Word export all work with. Equation numbers such as (1a) are kept after the equation. It runs on your computer (about 15 seconds a page; the first use downloads about 260 MB of models) and sends nothing anywhere. It is a model, so check the equations against the page; one it cannot read reliably is replaced by a note instead of junk. Tables are not rebuilt by this method.
+
+### Changed
+
+- When a local Ollama is too old to load a model (for example Llama 3.2 Vision, "unknown model architecture: mllama"), the error now says so and what to do.
+
+---
+
 ## [2.31.5] - 2026-10-26
 
 ### Changed
