@@ -5,6 +5,20 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.29.0] - 2026-10-26
+
+### Added
+
+- **Equations in Word: professional or linear.** Word shows an equation either built up (professional) or as one line of text (linear, Word's UnicodeMath). **Preferences > Speech > Mathematics > Equations in Word files** chooses which ScanMaster writes: Professional (built up) is the default, Linear (text) writes for example `x=(-b±√(b^2-4ac))/2a`, which Word builds up with Alt+= . The linear forms were checked against what Word itself writes when it converts the same eleven equations to linear.
+- **AI Assistant: Explain.** A new Explain button (Alt+X) explains what is in the prompt box, in plain language, saying first what kind of text it is.
+
+### Fixed
+
+- **AI Assistant controls cut off.** On a screen too small for the window (a laptop at 150%), the answer box now gives up height, and the prompt box if needed, so Insert at Cursor and Close are always on the screen.
+- **Equations in Word, seen in Word.** Function names such as sin and log are upright, as Word writes them (they were slanted like variables).
+
+---
+
 ## [2.28.1] - 2026-10-26
 
 ### Fixed
