@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.31.3] - 2026-10-26
+
+### Changed
+
+- **PDF text and scanned-page imports read more like the original.** Lines that were only wrapped at the edge of the page are joined into one paragraph (a word split with a hyphen is put back together), instead of one paragraph per line, and short lines in capitals such as INTRODUCTION or PROBLEM FORMULATION become headings, so you can jump between sections. Table rows, lists and new sentences stay on their own lines.
+
+### Fixed
+
+- A fault while importing a PDF now shows a message and leaves your documents untouched, instead of closing ScanMaster.
+
+---
+
 ## [2.31.2] - 2026-10-26
 
 ### Fixed
