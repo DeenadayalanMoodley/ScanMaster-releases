@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.28.0] - 2026-10-26
+
+### Fixed
+
+- **Explore Equation could not be used properly.** It started on the whole equation, where Left and Right only said "end of math", and it refused to start when the cursor was just after the equation (where it is after Insert Equation, or after arrowing through one). Now it says the whole equation, then puts you on its first part so Left and Right move between the parts at once, and it works from the end of an equation too. The announcement lists the keys.
+
+### Changed
+
+- **Equations are stored as proper MathML in Scan Master documents.** A `.smdx` file used to keep an equation as escaped text inside an attribute; it is now a real `<math>` element in the MathML namespace inside the run (other tools can read it, and it is far more compact). Older files still open. Word documents already store equations as Office Math (OMML), and HTML and EPUB as MathML.
+
+---
+
 ## [2.27.9] - 2026-10-23
 
 ### Fixed
