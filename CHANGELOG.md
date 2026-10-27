@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.37.1] - 2026-10-28
+
+### Fixed
+
+- **A cloud voice no longer loses a whole audiobook to a 429 error.** Google (and other services) refuse requests that come too fast or past a quota. Saving a book as audio asked for several chapters at once and gave up after about 15 seconds, so one refusal at the end threw the whole book away. Now no more than three requests go to a service at a time; when a service says it is being asked too often, everything waits as long as the service asks (up to about ten minutes) and then continues; and the export stops at once when it does fail, instead of making the rest of the book first. Every piece of speech made is kept for a week, so saving again after a failure only asks for the parts that are missing. The error now says what to check.
+
 ## [2.37.0] - 2026-10-27
 
 ### Added
