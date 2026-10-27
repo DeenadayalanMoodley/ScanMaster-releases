@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.33.2] - 2026-10-27
+
+### Fixed
+
+- **Mistral Voxtral showed only English voices.** Mistral hands out its voice list a page at a time, and ScanMaster read only the first page. It now reads every page, so all of Voxtral's voices in every language appear in Speech Settings. If you added Mistral before, open Preferences > Cloud TTS, choose Edit, then Save to fetch the full list.
+
 ## [2.33.1] - 2026-10-27
 
 ### Added
