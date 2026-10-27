@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.34.0] - 2026-10-27
+
+### Added
+
+- **Kokoro speaks Spanish, French, Hindi, Italian and Brazilian Portuguese.** These voices were hidden because ScanMaster could only phonemise English. They now go through espeak-ng (the Piper add-on brings it, so install Piper too) with the same phoneme conversion Kokoro's own tools use. In Speech Settings, Kokoro's voices are grouped by language. Japanese and Chinese are not offered yet: they need dictionaries of their own.
+- **British English voices use British pronunciations.** They used the American dictionary before.
+
+### Fixed
+
+- **Dates, times, money and numbers are read as words in Kokoro.** "October 27, 2026", "27/10/2026", "2026-10-27", "3:45 pm", "$5.50", "12%", "22nd", "1,234,567", "1990-1995" and years like "in 1984" were spoken poorly or skipped. Spanish, French, Italian and Portuguese numeric dates are written out too. Abbreviations such as Dr., Mr., Mrs. and vs. are spelled out.
+- **Words missing from Kokoro's English dictionary are pronounced, not spelled out letter by letter.** With the Piper add-on installed, espeak-ng says names and new words.
+
 ## [2.33.2] - 2026-10-27
 
 ### Fixed
