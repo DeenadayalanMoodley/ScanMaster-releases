@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.37.0] - 2026-10-27
+
+### Added
+
+- **Kokoro speaks Japanese.** The Japanese voices appear in Speech Settings. Kanji are read with a Japanese dictionary built into ScanMaster (nothing to install), the particles は, へ and を are read wa, e and o, and a verb with its endings is spoken as one word. Numbers, years, months, days (ついたち, ふつか ...), times, yen and percentages are read the Japanese way, and Latin words in the text are said in English. A word the dictionary does not know is skipped rather than guessed. Whisper transcribed a test paragraph almost word for word.
+
 ## [2.36.0] - 2026-10-27
 
 ### Added
