@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.33.1] - 2026-10-27
+
+### Added
+
+- **Mistral Voxtral** is a new cloud voice service in Preferences > Cloud TTS. It uses your Mistral API key (the one from AI or Cloud OCR is filled in for you), offers Voxtral's voices in many languages, and lists any voices saved in your Mistral workspace. Voxtral has no speed setting, so the Rate setting does not change it.
+
+---
+
 ## [2.33.0] - 2026-10-27
 
 ### Added
