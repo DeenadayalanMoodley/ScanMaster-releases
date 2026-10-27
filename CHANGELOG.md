@@ -5,6 +5,13 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.35.0] - 2026-10-27
+
+### Added
+
+- **Kokoro speaks Chinese.** The Mandarin voices appear in Speech Settings. Chinese text is cut into words, read with the usual pinyin readings (including phrase readings such as 银行 and 一不小心) and spoken with Kokoro's tone sounds. Numbers, years, percentages, times and money are read as Chinese numerals, Chinese punctuation is understood, and Latin words in the text are said in English. Chinese sentence ends (。！？) now also end a sentence for reading and pauses in every engine.
+- **Kokoro reads isiZulu, isiXhosa and Setswana (approximate).** Under each language in Speech Settings the Spanish, Italian and Portuguese voices read it with Voice Creator's North-West University pronunciation rules, including numbers, dates, times and money in the language. Words get the stress these languages have, on the second-to-last syllable. Kokoro was never trained on these languages and has no click sounds, so the clicks are approximated and the voice has an accent. Hyphenated forms (ku-Okthoba, engu-12), accented foreign words and acronyms no longer cost the word.
+
 ## [2.34.0] - 2026-10-27
 
 ### Added
