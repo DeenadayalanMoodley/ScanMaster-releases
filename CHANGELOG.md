@@ -5,6 +5,20 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.33.0] - 2026-10-27
+
+### Added
+
+- **Cloud voices.** A new **Cloud TTS** page in Preferences lets you add the cloud voice services you use: OpenAI, ElevenLabs, Microsoft Azure Speech, Google Cloud Text-to-Speech, Deepgram Aura, and any server that speaks OpenAI's text-to-speech API (for example Kokoro-FastAPI on your own network). Add a service with its API key (kept on this computer, protected, and sent only to that service); Scan Master fetches its voices.
+- Each service you add is a branch of the voice tree in **Speech Settings**, with its voices grouped by language. Pick one and choose Test Voice; save it in a speech profile like any other voice. Reading (Read All, Read From Cursor), Document Elements voices, speakers, the voice effects and **Save as Audio** (single file, chapters, batches) all use it. Preferences > Speech lists each service in its Engine list as "Cloud: name".
+- A busy or failing service is tried again a few times; if a cloud voice cannot speak (a wrong key, no connection) a message says why instead of staying silent. Long paragraphs are sent in pieces within each service's limit.
+
+### Fixed
+
+- Kokoro voices were missing from the voice list offered for a Document Element in Speech Settings.
+
+---
+
 ## [2.32.0] - 2026-10-26
 
 ### Added
