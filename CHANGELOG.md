@@ -5,6 +5,17 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.36.0] - 2026-10-27
+
+### Added
+
+- **Test Voice in Document Elements.** Speech Settings > Document Elements has a Test Voice button that speaks a sample in the voice, rate, pan and effects set for the element, before you save. With "(use profile default)" it tests the profile's voice.
+- **Next Speaker and Previous Speaker.** Beside the Element box, these move to the next or previous Speaker style (wrapping round) and put the focus on the Speaker voice box, so setting up a voice for each speaker of an audiobook is quick. Your screen reader says the style and its current voice.
+
+### Fixed
+
+- **Cloud voices no longer say "quote".** Quotation marks (straight, curly and angle) and markup symbols such as * _ ~ ` | # are left out of the text sent to Google, OpenAI, ElevenLabs, Azure, Deepgram, Mistral and other cloud voices, which read them aloud. The words either side stay apart.
+
 ## [2.35.0] - 2026-10-27
 
 ### Added
