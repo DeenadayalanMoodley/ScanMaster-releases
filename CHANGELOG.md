@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.39.1] - 2026-10-28
+
+### Fixed
+
+- **An update no longer fails because the network blinked for a moment.** After the update came down, a single failure to fetch its small signature file ("No such host is known", a busy server) ended the update with "it could not be verified". The signature is now asked for up to six times, waiting a little longer between tries; a signature that is really missing (HTTP 404) is still refused at once. This helps from this version on: a copy older than 2.39.1 that hits the problem needs the update tried again, or the installer downloaded from the release page.
+
 ## [2.39.0] - 2026-10-28
 
 ### Added
