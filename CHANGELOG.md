@@ -5,6 +5,13 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.38.2] - 2026-10-28
+
+### Fixed
+
+- **Google voices: "This request contains sentences that are too long" is fixed at its real cause.** This was tested against the live Google service with your book. Google refuses requests of more than a few hundred bytes with that message, whatever the sentences are, and it is strictest for voices of another language than the text: a Japanese or German Chirp 3 voice given English text. ScanMaster was sending up to 4,000 bytes at a time. It now sends Google at most 450 bytes per request, and if Google still refuses, shorter requests and shorter sentences, remembering what worked for each voice. The earlier fix in 2.38.1 (a full stop on every line) was real but not the cause. Run through the new code with a Japanese voice, 38 paragraphs of the book had no refusals.
+- **Piper voices in Speech Settings are grouped by language** and listed as "name, region, quality" (for example "thorsten, DE, medium" under German), ready for the many more Piper voices.
+
 ## [2.38.1] - 2026-10-28
 
 ### Fixed
