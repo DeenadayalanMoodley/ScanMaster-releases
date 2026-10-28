@@ -5,6 +5,13 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.37.2] - 2026-10-28
+
+### Fixed
+
+- **Google no longer refuses a book with "sentences that are too long" (400).** Lines of verse, headings, lists and scanned text that had no full stops were sent as one enormous sentence, which Google rejects. A line break now always ends a sentence, and any sentence over about 300 characters is cut at a comma, semicolon or colon (else between words) into shorter ones.
+- Behind the scenes: the program's own test run crashed about one time in ten (a Windows component was unloaded while still in use), and one cloud-voice test could fail when run twice in a row. Both are fixed, so the checks now pass every time.
+
 ## [2.37.1] - 2026-10-28
 
 ### Fixed
