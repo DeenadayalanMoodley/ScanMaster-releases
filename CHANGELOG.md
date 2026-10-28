@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.38.1] - 2026-10-28
+
+### Fixed
+
+- **Google voices: "This request contains sentences that are too long" is fixed for books whose lines have no full stops.** Google does not treat a line break as the end of a sentence, so a run of headings, verse or list lines with no full stops reached it as one enormous sentence, however short ScanMaster cut the others. Each such line now ends with a full stop before it is sent. The earlier step-down to shorter sentences could never have cured this, which is why it failed even at 30 characters.
+
+- **Reading aloud with an online voice can always be stopped.** While Google (or another online service) was slow or being tried again, Stop, pause and the other speech keys did nothing until the next piece arrived, which could be a minute or more. Stop is now obeyed within a tenth of a second.
+- **Stop works after you start reading again.** Starting a reading while an earlier one was still ending let the earlier one's end wipe the new reading's Stop control, so Stop did nothing, only pause worked, and pressing Play again layered a second voice over the first. A reading that has been replaced no longer touches the new one.
+- **Mistral Voxtral is no longer offered as a cloud voice.** Its content filter refuses some passages of ordinary books (a war narrative, for one) with "403 Request blocked by guardrail policy", which stopped reading and exports, and nothing in ScanMaster can lawfully get round that without changing the text. A book read for study must be read in full, so the service is removed from Preferences > Cloud TTS. A Voxtral entry you added earlier is dropped from the list when this version starts; your other cloud voices are kept. Mistral is still available for AI and Cloud OCR. Google, OpenAI, ElevenLabs, Azure, Deepgram and your own server do not have this problem, and Kokoro and Piper read everything on your own computer.
+- **Play and pause are one command.** The Speech menu no longer has a separate Pause / Resume item: Read All and Read from Cursor (Ctrl+F2, F2) pause when pressed while reading and resume when pressed again, and Stop (F4) stops. The separate "Pause/resume speech" command is gone from the Keyboard Manager too, and the two read commands there are named "Read all (play/pause)" and "Read from cursor (play/pause)".
+- **Online voices try a failed request longer before giving up** (eight tries, waiting up to 20 seconds between them, was five tries and 15 seconds), so a short break in the connection no longer ends the reading. The log now says why each try failed.
+
 ## [2.38.0] - 2026-10-28
 
 ### Added
