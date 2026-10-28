@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.39.0] - 2026-10-28
+
+### Added
+
+- **111 more Piper voices in 43 languages.** The Plugin Manager now lists every single-speaker voice of the official Piper collection that ScanMaster can speak, in Albanian, Arabic, Basque, Bulgarian, Catalan, Czech, Danish, Dutch, Farsi, Finnish, French, Georgian, German, Greek, Hindi, Hungarian, Icelandic, Indonesian, Italian, Kazakh, Korean, Latvian, Luxembourgish, Malayalam, Nepali, Norwegian, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swahili, Swedish, Telugu, Turkish, Ukrainian, Urdu, Vietnamese, Welsh and more. They are listed by language and quality, and installed one at a time. Speech Settings groups Piper voices by language and shows each as name, region and quality. Ten of them (German, French, Spanish, Italian, Russian, Arabic, Hindi, Korean, Portuguese and Turkish) were run through ScanMaster and produced speech; whether they sound right to a native speaker is not checked.
+- **Each Piper voice shows its own licence**, and its model card is installed beside it. The licences differ (CC0, CC BY, Apache, and a few non-commercial ones such as CC BY-NC-SA); the older note that called every voice MIT was wrong for these. Voices with an unknown licence are not offered.
+- Not offered yet: Piper voices that bring their own phonemizer (the Chinese pinyin voices, Hebrew, Lithuanian and Thai), and multi-speaker voices.
+
 ## [2.38.2] - 2026-10-28
 
 ### Fixed
