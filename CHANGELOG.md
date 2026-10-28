@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.37.3] - 2026-10-28
+
+### Fixed
+
+- **Google can no longer stop a book over a long sentence.** If Google still says a sentence is too long, Scan Master now asks again for that part with shorter sentences (about 120, then 40 characters), instead of failing the whole export. Bracket-style quotation marks (for example the double angle brackets some books use) are no longer read or counted as part of a sentence.
+
 ## [2.37.2] - 2026-10-28
 
 ### Fixed
