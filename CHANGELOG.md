@@ -5,6 +5,17 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.38.0] - 2026-10-28
+
+### Added
+
+- **The pronunciation dictionary now works with every speech engine, and for one engine or one voice.** In Speech Settings > Pronunciation, the Scope box lists Global (every engine and voice), each speech engine (SAPI 5, Windows voices, Piper, Kokoro, Supertonic and each cloud service), and each voice. Entries are applied to the text before any engine speaks it, for reading aloud and for Save as Audio. For a voice, its own entries win over its engine's, and those over the global ones. Until now the dictionary was stored but never used by any engine. Entries made under the old "SAPI5" and language scopes are moved to the new ones.
+
+### Fixed
+
+- **Google no longer stops a whole book over one sentence it calls "too long".** Some Google voices accept only short sentences (about a hundred characters or fewer). When Google refuses a sentence as too long, Scan Master now asks again with shorter and shorter sentences (300, then 160, 100, 60 and 30 characters) until Google accepts them, and remembers the size that worked for that voice for the rest of the export. The refused text is recorded in the log.
+- **Open: "All Supported Files" now lists every supported type, .smdx included.** The list is built from the same table as the individual file types, so they can no longer differ, and Open no longer starts with the current document's name in the file name box, which could stand in the way of the filter. The dialog now opens in the folder of the current document.
+
 ## [2.37.3] - 2026-10-28
 
 ### Fixed
