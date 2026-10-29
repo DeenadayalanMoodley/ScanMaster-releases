@@ -5,6 +5,11 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.39.2] - 2026-10-29
+
+### Fixed
+
+- **Speech Settings opens quickly again.** The voice list was filled in one row at a time with the list redrawing, and telling screen readers, after every row; with a cloud provider such as Google (thousands of voices) that took seconds. The list is now filled with redrawing off and the language names are looked up once each. This is untested against your own voice set; if the dialog is still slow, the log will show how long it takes.
 ## [2.39.1] - 2026-10-28
 
 ### Fixed
