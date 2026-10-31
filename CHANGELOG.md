@@ -5,6 +5,11 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.39.3] - 2026-10-31
+
+### Fixed
+
+- **Speech Settings opens quickly again.** Measured this time, on a copy of your settings: opening took 14.7 seconds, of which 14 went to filling the Pronunciation tab's Scope box. For every voice in it, ScanMaster re-read and re-parsed your whole saved list of cloud providers (with all their voices) from the database just to get the provider's name. Each engine's name is now looked up once; the dialog opens in 0.7 seconds. The 2.39.2 change (redraw off while the voice list is filled) stays. The log (`scanmaster.log`) now records how long each part of opening Speech Settings takes.
 ## [2.39.2] - 2026-10-29
 
 ### Fixed
