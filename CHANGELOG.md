@@ -5,6 +5,11 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.39.4] - 2026-11-01
+
+### Fixed
+
+- **Choosing another Kokoro voice, such as a British English one, no longer makes the speech wait for seconds.** The loaded Kokoro engine was kept only for the one voice it was loaded with, so every other voice loaded the whole 325 MB model again (9.7 seconds on this machine). A British voice also needs its own pronunciation dictionary, which forced a reload even from another English voice. Now any voice change keeps the loaded model, and a change of language (American to British English, English to French) only swaps the pronunciation part: 0.18 seconds measured. The same applies to Supertonic voices. Piper still loads one model per voice.
 ## [2.39.3] - 2026-10-31
 
 ### Fixed
