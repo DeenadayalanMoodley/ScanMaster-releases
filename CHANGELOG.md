@@ -5,6 +5,11 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.39.5] - 2026-11-01
+
+### Fixed
+
+- **Dictionary Lookup and Thesaurus: moving through the synonyms and antonyms no longer changes the word you looked up.** Each arrow press in the list used to put that word into the Word box and look it up. Now the list only moves; press Enter (or double-click) on a listed word to look that word up, and Insert puts it into your document. In the Thesaurus, Lookup is now the default button, so Enter in the Word box looks the word up.
 ## [2.39.4] - 2026-11-01
 
 ### Fixed
