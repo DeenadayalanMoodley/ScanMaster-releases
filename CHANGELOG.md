@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.40.0] - 2026-11-01
+
+### Changed
+
+- **One place for every API key: Tools > Preferences > API Keys.** The keys of the AI providers (OpenAI, Anthropic, Google Gemini, Mistral, OpenRouter, Ollama Cloud, Hugging Face, and the address of an Ollama server), the Cloud OCR services (Mistral, Mathpix, Datalab) and Cloud TTS (ElevenLabs, Microsoft Azure Speech, Google Cloud Text-to-Speech, Deepgram, an OpenAI-compatible speech server; OpenAI's key is shared with AI) are all added, changed and removed on this page: a list of the services that have a key, with Add, Edit and Remove, saved as soon as you make a change. The AI, Cloud OCR and Cloud TTS pages no longer have key boxes; the Cloud TTS add/edit window says whether a key is saved. Mistral has one key for AI and for Cloud OCR.
+- **Keys are hidden.** A key is typed into a password box, so it is not shown on the screen and NVDA and other screen readers do not read it out (before, the AI and Cloud OCR key boxes were ordinary text boxes that a screen reader read aloud and anyone looking could see). The keys were already stored encrypted.
+- **AI Tasks and the AI page offer only providers that have a key.** Each job's Provider list shows Default and the providers (and, for OCR, the document services) with a key on the API Keys page; the AI page's Provider list is the same. A provider whose key was removed after you chose it for a job stays in that job's list marked "(no API key)", so nothing changes without you. When you add or remove a key, these lists follow at once.
+- Keys you had already entered (AI, Cloud OCR, and the key inside each Cloud TTS provider) are moved to the new page the first time you start this version. An Ollama address that was only the default saved by pressing OK, with Ollama never chosen, is dropped, so Ollama is not listed until you add it.
 ## [2.39.5] - 2026-11-01
 
 ### Fixed
