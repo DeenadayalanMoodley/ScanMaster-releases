@@ -5,6 +5,11 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.41.0] - 2026-11-02
+
+### Changed
+
+- **The AI and AI Tasks pages are one page: Preferences > AI.** At the top are the provider and model most things use. Below them, choose a **Job** (OCR, Proofreading, Layout, Image descriptions, Grammar checking, AI Assistant, Dictionary, Speaker detection) and the page shows that job's own provider and model; Proofreading, Layout and Image descriptions also show their "by default" box, and Proofreading, Layout, Image descriptions and Grammar checking show their instructions (the text sent to the AI) with Reset to default. This replaces eight rows of lists with one set, so the page is shorter and a screen reader has far less to move through; the Account and limits section stays at the bottom. Everything you had set carries over. The old "Edit prompt for" list is gone, since the Job list chooses the instructions.
 ## [2.40.0] - 2026-11-01
 
 ### Changed
