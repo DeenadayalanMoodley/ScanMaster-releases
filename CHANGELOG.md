@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.42.0] - 2026-11-02
+
+### Added
+
+- **Test connection now says what the model can do.** After the model answers, the AI page's Test connection reports whether it chats with text, reasons (thinks before it answers), reads pictures, reads the text in pictures (OCR), calls tools (function calling), listens to audio, speaks, transcribes speech, makes embeddings or draws pictures. Each answer says how it is known: **tested** (it answered; its reply showed it thinking; it read a small test picture, which costs a few more tokens), **the provider says so** (the service's own details for that model, from Mistral, Ollama, OpenRouter, Gemini and Anthropic), or **judging by its name** (OpenAI and Hugging Face tell nothing about a model). What cannot be known is listed as not known. A model that is not for chatting (an embedding, speech or OCR-only model) is described rather than reported as a failed test, and a model its provider says cannot see is not sent the picture. Checked live against Mistral, OpenAI, Anthropic and OpenRouter.
+## [2.41.1] - 2026-11-02
+
+### Fixed
+
+- **Mistral: "top_p must be 1 when using greedy sampling" is fixed.** Test connection, language detection and grammar checking ask for the most predictable answer (a temperature of 0), which Mistral refuses unless `top_p` is also 1. ScanMaster now sends `top_p` 1 to Mistral, and answers the same refusal from any other service that passes requests on to Mistral by sending it again with `top_p` 1.
+- **Mistral's reasoning models can be read.** They answer with a list of parts, a "thinking" part and then the text; ScanMaster took that for an unknown reply. It now reads the text parts and leaves the thinking out. Checked live with the Mistral key in your settings: the request is accepted and the answer "OK" comes back.
+- An unreadable reply now shows more of what the service sent (900 characters instead of 240) in the error.
 ## [2.41.0] - 2026-11-02
 
 ### Changed
