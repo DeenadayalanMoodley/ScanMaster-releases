@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.44.0] - 2026-11-03
+
+### Added
+
+- **Open files from the command line.** `ScanMaster.exe [switches] file...` opens the files when it starts. Switches: `--auto` (a PDF or picture opens with the automatic settings, without asking), `--read` (open the file and read it aloud), `--audio` (open the file and show Save as Audio) and `--new-window` (a window of its own). When ScanMaster is already running, the files open as new tabs in that window and the second program ends at once, so double-clicking or choosing several files fills tabs in one window; files that need a dialog or a long import open one after another. Files with the .smdx and .smf extensions now open when double-clicked (the association was set up, but the file name was ignored).
+- **A ScanMaster submenu in Explorer's right-click menu.** The installer (a new "Add a ScanMaster submenu to the right-click menu" choice, on by default; not in a portable copy) adds it to every file type ScanMaster opens: choose a file, then ScanMaster, then **Open**, **Open with automatic settings** (PDFs and pictures), **Read aloud** or **Save as audio** (documents and PDFs). On Windows 11 it is under Show more options (Shift+F10).
 ## [2.43.0] - 2026-11-03
 
 ### Added
