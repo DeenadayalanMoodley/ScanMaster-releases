@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.43.0] - 2026-11-03
+
+### Added
+
+- **Open a picture: File > Open now takes PNG, JPEG, GIF, BMP, TIFF and WebP files.** An **Open Picture** dialog asks what to do, like Import PDF does for a PDF, and says how big the picture is. **Auto** (the default) reads the text with Windows OCR and, if the picture has no text (a photograph, a drawing), has the AI describe it instead. You can also choose one engine to recognise the text (Windows OCR, Tesseract, PaddleOCR, Docling, Equations (local), or the cloud services Mistral OCR, Mathpix and Datalab), set the OCR language, and use the AI options (proofread the text, preserve the exact layout, also describe the picture), which start as the defaults on the AI page. **Describe the picture only** skips text recognition. The picture opens as a one-page document: the picture in the page panel, the text found in it, and its description where there is one (shown as plain lines, without Markdown symbols). It opens as an untitled document, so saving never overwrites the picture file. A picture with no text, with AI off or no provider that can see pictures, says so instead of opening blank.
+- Pictures appear under "Pictures" (and in All Supported Files) in the Open dialog; they are not offered when saving.
 ## [2.42.0] - 2026-11-02
 
 ### Added
