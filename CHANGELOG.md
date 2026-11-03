@@ -5,6 +5,11 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.44.1] - 2026-11-03
+
+### Fixed
+
+- **The installer failed when installing for the current user only.** The new right-click menu entries (and the .smdx/.smf file associations) were written to the machine-wide registry classes, which a per-user install may not write: "Access is denied" and the whole install was rolled back. They now go to the machine's classes for an all-users install and to the user's own for a per-user install.
 ## [2.44.0] - 2026-11-03
 
 ### Added
