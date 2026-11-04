@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.45.0] - 2026-11-04
+
+### Added
+
+- **Open DAISY 3 (NISO Z39.86), NIMAS and DAISY 2.02 books, to edit them and describe their pictures.** File > Open takes a book's package file (`.opf`; "DAISY 3 and NIMAS Books" in the list of types) or a DAISY 2.02 book's `ncc.html`, and a ZIP holding a book. A DAISY 3 or NIMAS book opens from its DTBook with its structure as the book has it: heading levels, nested lists (bulleted, numbered, lettered or in Roman numerals), tables with their header rows and captions, pictures with their alt text, captions and producer notes, page numbers, notes (kept as real notes, with the markers pointing at them), sidebars, poems, definition lists, block quotes, bridgeheads, emphasis, sub- and superscripts, links, text in another language, and equations. The book's own parts have styles of their own in the Styles pane (Title, Author, Page Number, Sidebar, Producer Note, Poem Line, Definition Term and the rest), and each top-level section is a page. A DAISY 2.02 book opens for its text in reading order, with its pictures, headings, lists, tables and page numbers; its audio is not kept.
+- **Saving a book.** Save and Save As with "DAISY 3 and NIMAS Books (*.opf)" write the package, the DTBook content and the pictures (an `images` folder) beside the chosen file, and read back as the same book (the structure above, the formatting, notes, nesting and header rows were compared after a save and a re-open). A picture's alt text is saved as its `alt`, and a long description (the Image Description paragraph after the picture, from Describe Image) as its producer note, where DAISY and NIMAS books keep descriptions; a picture nobody has described stays undescribed. Checked with the official DTBook 2005-3 validator (DAISY Pipeline 2) and the Z39.86 DTDs: the only thing reported is the fallback picture NIMAS asks for each equation, which is not made (each equation is saved with its text description). A DAISY 2.02 book cannot be saved back (its audio would no longer match); Save As another format, such as DAISY 3 and NIMAS. A DTBook has no place for underline, strike-through, colours, fonts or alignment, so those are not saved.
+- Books made with Save as Audio (DAISY 2.02 and DAISY 3) open the same way.
+
+### Removed
+
+- **The legacy `.smf` format.** ScanMaster has no such format of its own to keep: its file type, the option to associate it, and its right-click menu entries are gone. (Nothing else changes: `.smdx` is the document format.)
+
 ## [2.44.1] - 2026-11-03
 
 ### Fixed
