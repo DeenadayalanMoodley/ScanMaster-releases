@@ -5,6 +5,16 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.46.0] - 2026-11-04
+
+### Added
+
+- **Save As writes DAISY 2.02, DAISY 3 (NISO Z39.86) and NIMAS books, text with pictures.** The Save As list has three new types: "DAISY 3 Book, text with pictures (NISO Z39.86)" (package, DTBook, navigation file and pictures), "NIMAS Book, text with pictures" (the same without the navigation file) and "DAISY 2.02 Book, text with pictures" (`ncc.html`, `content.html` with the book's styles and layout, a SMIL file for each part from one heading to the next, and the pictures). They have no audio: Speech > Save as Audio stays the way to make books that are read aloud in step with their text. The new DAISY 3 navigation file and the DAISY 2.02 files pass the official validators. A DAISY 2.02 book opened from its `ncc.html` can now be saved back in place when it is a text book; one that has audio is refused with an explanation, as its audio would no longer match the text.
+
+### Fixed
+
+- **Nested lists** are kept when a document is saved as a web page, EPUB or DAISY 2.02 book and opened again: a list inside a list item used to be flattened into its parent's text.
+
 ## [2.45.0] - 2026-11-04
 
 ### Added
