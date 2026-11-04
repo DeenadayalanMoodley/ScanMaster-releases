@@ -5,6 +5,13 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.47.0] - 2026-11-04
+
+### Added
+
+- **Accessibility checker (Review > Check Accessibility, Ctrl+Shift+F8).** Finds what would make a document hard to use with a screen reader, or fail an accessibility check, before it is saved or made into audio. It applies the rules of the checkers people know, to the format the document is going to become: **Word** (the Word Accessibility Checker and WCAG 2.2), **PDF** (PDF/UA), **EPUB** (EPUB Accessibility 1.1 and Ace), **DAISY and NIMAS** (the DAISY guidelines and Z39.86), **web pages** (WCAG 2.2) and **audio and talking books**. 37 rules: pictures with no or placeholder alternative text, a missing title, language or author, skipped, empty or missing headings and paragraphs that only look like headings, tables with no header row, an uneven grid, blank rows or columns or a table inside a table, links that say "click here" or are a bare address or point to a bookmark that is not there, footnotes with no text, low text contrast (WCAG ratios), very small text, spaces and empty paragraphs used for layout, lists typed by hand, long passages in capitals, justified text, underlined text that is not a link, unresolved comments, pages that are only a picture, and a note about equations for NIMAS. Each problem is an error, a warning or a tip (a missing title is an error for PDF, EPUB and DAISY, a warning for Word and web pages, as in those standards); choosing one shows how to fix it and which standard it comes from, and Go To takes the cursor there. Changing "Check for" checks the same document with another format's rules.
+- **It runs before you save or make audio.** Saving a Word, PDF, EPUB, DAISY, NIMAS or web page file, or Save as Audio, now stops when the check finds errors and asks whether to look at them (Yes), go ahead anyway (No) or stop (Cancel); going ahead is remembered for those errors in that document. Warnings and tips never interrupt. Preferences > Advanced > "Check accessibility before saving or making audio" turns it off.
+
 ## [2.46.0] - 2026-11-04
 
 ### Added
