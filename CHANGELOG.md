@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.48.0] - 2026-11-10
+
+### Added
+
+- **Automatic capture from a camera.** Capture from Camera has an **Automatic** checkbox for scanning a book with a document camera: Scan Master watches the camera and, as soon as the picture has been still for a second, takes it. Turn the page, take your hand away, and the new page is taken when it settles; a page left lying there is taken once, and nothing is taken while a hand or a page is moving. Without the checkbox it is manual: press Take Picture (Alt+T). Both modes can be used together, and the choice is remembered.
+- **Camera shutter sound.** Every picture taken from a camera makes a shutter sound (a new earcon event, "Camera shutter", in Preferences > Earcons; it is in the Standard and Essentials presets, and can be given another sound or turned off).
+- **Pictures go straight into the document.** There is no Insert step any more: each picture is cleaned up as Preferences > Scanning says (a book spread can become two pages), read with OCR if "Run OCR on each picture" is ticked, and added as a page, with Scan Master saying "Page N added". A new **Place pages** list chooses where: after the current page, before it, at the beginning or at the end (the end is the starting choice). Cleaning up and OCR happen in the background, so the next page can be turned meanwhile, and pages are added in the order they were taken.
+
+### Changed
+
+- The camera is now held open while the Capture from Camera dialog is showing, so a picture is taken at once instead of waiting for the camera to start each time; it is released when the dialog closes.
+
 ## [2.47.0] - 2026-11-04
 
 ### Added
