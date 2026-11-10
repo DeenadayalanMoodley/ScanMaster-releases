@@ -5,6 +5,13 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.49.0] - 2026-11-10
+
+### Added
+
+- **Choose how a camera picture is read.** Capture from Camera now has the OCR choices of the Scan dialog: **Run OCR on each picture**, an **OCR engine** (Windows OCR, Tesseract, PaddleOCR, the Mistral OCR, Mathpix and Datalab cloud services, or **AI vision**, where an AI model reads the picture, using the provider set for OCR in Preferences > AI Tasks), the **OCR language** for the engines that use one, and **AI assistance**: proofread the text with AI, and, if a picture has no text, describe it with AI. An engine that is not ready (not installed, no key) says so when you choose it. All of it is remembered.
+- **Page edge detection.** "Detect page edges" (on to start with) finds the page in each camera picture, against the desk or mat, and cuts the picture to it, straightening a page that is turned or photographed at an angle to an upright rectangle, before it is cleaned up and read. If no page outline is found, the whole picture is used and the status line says so.
+
 ## [2.48.0] - 2026-11-10
 
 ### Added
