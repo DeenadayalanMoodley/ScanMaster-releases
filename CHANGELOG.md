@@ -5,6 +5,20 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.50.0] - 2026-11-15
+
+### Added
+
+- **The camera tells you whether the page is in view.** With "Guide me" on (the starting choice), Capture from Camera keeps the camera viewing and says, in a few words, whether the page is in view ("Page in view"), which way to move it when it runs off an edge ("Move the page to the left", "...away from you", "...to the left and towards you"), when it is too big for the view, and when there is no page ("I can't see a page"). It speaks only when what it sees has settled (a hand crossing the page says nothing), only when it changes, and repeats a problem every few seconds while it is still there. Left and right are the camera's own: the left of what it shows. If Turn pages upright is off it also says when the page is upside down ("Turn it around") or on its side ("Turn it a quarter turn clockwise").
+- **Turn pages upright.** "Turn pages upright" (on to start with) finds which way up each page is and turns it before it is read: a page that is upside down or on its side was read as nonsense. It uses Tesseract's orientation detection and, when that is not sure (a page of little text), reads the page both ways up and keeps the way that reads better. Needs Tesseract, which is installed with ScanMaster.
+- **Pages are read in the background, and you are told when they are all read.** The text of each picture is read as it is taken, one page after another while you turn the next page; the status line counts the pages waiting, and when the last is read ScanMaster says "All pages are ready to read" and you can start reading straight away. Closing the dialog does not stop pages still being read: they are added, and announced, when done. Run OCR on each picture is now on to start with.
+
+### Fixed
+
+- **Text from the camera was poor.** Photos were taken at the camera's small default size (about 160 KB); they are now taken at its largest (3264 by 2448 on a document camera, in about a quarter of a second), with continuous autofocus. The text of a page is now made into paragraphs, headings and tables (lines broken only by the width of the page are joined into sentences, and words split at the end of a line are joined) instead of one paragraph per line.
+- **Page edges** never cut away the page's writing now: an outline that has print outside it is not used, and the cut leaves a small margin. A page that runs off the top or left of the picture is found too.
+- **Sideways pages were turned the wrong way** by Preferences > Scanning's "Correct page orientation": Tesseract counts angles anticlockwise and they were used as clockwise, so a page on its side was turned further the wrong way (upside-down pages were right).
+
 ## [2.49.0] - 2026-11-10
 
 ### Added
