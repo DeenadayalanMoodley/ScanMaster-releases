@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.51.0] - 2026-11-15
+
+### Fixed
+
+- **Camera text came out as nonsense when Preferences > Scanning had page clean-ups on.** Those corrections (deskew, straighten text lines, whiten background, reduce noise, remove blur, black and white, and the rest) were applied to every camera picture, after it had already been cut to the page and turned upright. Measured on a real page from a document camera, each one alone cost between 0% and 38% of the words and all of them together left 15%. Camera pictures now skip them. A new **Apply the page clean-up from Preferences > Scanning** checkbox (off to start with) brings them back; splitting a book spread into two pages still follows the preference.
+- **The guidance told you to move a page you had not moved.** It was too strict about a page touching the edge of the picture, and said "Move the page to the right" a moment after "Page in view" when a hand was taken away. Now: a page that has lost only a sliver (under 4%, worked out from the page's shape and the sides that are not cut off) is in view; a page that has lost a little (under 10%) is told "Move the page a little to the left"; the guidance waits longer (1.6 seconds) before saying a page that was in view is not.
+
+### Added
+
+- **"Page in view, with very little room. Raise the camera a little if you can."** The camera has no zoom, so the way to get a larger view is to raise it. When a page nearly fills the picture this is said once.
+- **Automatic mode waits for a page.** It takes no picture of an empty mat or of a page that is mostly out of view, so a page that is placed well is taken once it is still.
+
 ## [2.50.0] - 2026-11-15
 
 ### Added
