@@ -5,6 +5,16 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.52.0] - 2026-11-18
+
+### Fixed
+
+- **Explore Equation said the same symbol over and over with NVDA.** The arrow keys went through the equation inside the document, where the cursor never moves; NVDA says the character at the cursor every time an arrow key is pressed, so it kept saying the first symbol (and what ScanMaster said was cut off by the next key). Explore Equation now opens the equation in its own window as a **tree of its parts**: the whole equation, then its parts (a fraction's numerator and denominator, a root's radicand, a power's base and exponent, the terms of a sum), then the parts inside those, down to the symbols. It is an ordinary Windows tree, which NVDA, JAWS and Narrator read natively: each part, how deep it is, and how many there are at that level. Up and Down move between parts, Right goes into a part, Left comes back out, Escape closes. Each part is said by MathCAT in the style and detail of Preferences > Speech > Mathematics, parts are named by their place ("Numerator: ...", "Exponent: 2"), and the braille of the part you are on is in a box below.
+
+### Removed
+
+- The "Explore equations by" setting (Enhanced, Simple, Character): it chose how the key-by-key walk started, which the tree replaces. The braille of the part is no longer put on the status bar.
+
 ## [2.51.0] - 2026-11-15
 
 ### Fixed
