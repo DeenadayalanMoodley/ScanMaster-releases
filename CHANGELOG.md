@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.54.1] - 2026-11-23
+
+### Fixed
+
+- **Rate and volume did nothing in the live sample (Neural Voices, Kokoro, Piper and other engines that are rendered in pieces).** The sample was spoken, but each piece was rendered at the saved Speech > Rate and played at the saved Speech > Volume, so the sliders in Speech Settings, and Test Voice, had no effect until you pressed OK. The sliders now decide the rate and the volume of the sample while it plays; afterwards reading goes back to Speech > Rate and Volume.
+
 ## [2.54.0] - 2026-11-23
 
 ### Added
