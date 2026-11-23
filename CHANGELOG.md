@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.53.0] - 2026-11-23
+
+### Added
+
+- **Neural Voices speech engine.** Microsoft's neural voices, the ones from the NVDA "Neural Voices" add-ons, in over 100 languages, are now a speech engine of ScanMaster, with Piper, Kokoro and Supertonic. ScanMaster starts the speech host (`nv-host.exe`) itself and talks to it privately, so nothing is installed or registered with Windows and it works from a portable copy. Install the engine from **Tools > Plugin Manager** (about 2.8 MB: only the program is downloaded; the Microsoft voices and the Speech SDK are not hosted by ScanMaster), then choose **Import voices...** and pick the folder that holds your Neural Voices driver add-on (`NeuralVoicesUA-*.nvda-addon`) and voice add-ons (`NeuralVoices-voice-*.nvda-addon`); the SDK and the voices are taken from them into ScanMaster's own folder. If the NeuralVoices SAPI is already installed on the computer, its voices are used without copying them. In **Speech > Speech Settings** the voices are grouped by language and then region, and the engine is offered in Preferences > Speech. It reads aloud, makes audio (Save as Audio and batch audio, mono at 24 kHz), follows the speech rate, and works with the pronunciation dictionary. Uninstalling the engine in the Plugin Manager removes only its program; imported voices and the SDK stay.
+
 ## [2.52.0] - 2026-11-18
 
 ### Fixed
