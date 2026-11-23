@@ -5,6 +5,17 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.54.0] - 2026-11-23
+
+### Added
+
+- **Hear the voice as you move the sliders.** In Speech > Speech Settings, moving a slider (rate, volume and pan on the Voice tab; rate, volume, pitch and pan on the Document Elements tab) now speaks the sample sentence again, with the sliders as they stand, as soon as you stop moving it for a moment (about a third of a second), stopping the sample before. Keyboard changes count too: each arrow-key step starts the wait again, so a run of steps is heard once, at the end. A new **Hear changes as I make them** box (on each tab, one setting, on to start with) turns it off. Test Voice also speaks with the sliders as they stand, not only as last saved: before, it ignored the rate, volume and pan on the sliders until you pressed OK.
+- **A style's pitch works.** The Pitch slider of Document Elements was saved but never used: nothing in reading or in Save as Audio changed the pitch. The pitch is now made on the audio (the speech engines have no pitch of their own): a window-matching time stretch followed by a resample moves it by up to four semitones either way (the slider's -10 to 10) without changing how long the voice takes. It applies when the document is read aloud, in Save as Audio, and in the Test Voice and live sample.
+
+### Fixed
+
+- **A style's volume was ignored when reading aloud** (Save as Audio had it): a style with a volume under 100 is now played at that part of the reading volume.
+
 ## [2.53.0] - 2026-11-23
 
 ### Added
