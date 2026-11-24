@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.58.0] - 2026-11-24
+
+### Changed
+
+- **The speech sliders move in 1 % steps.** In Speech Settings (Voice and Document Elements) the Rate, Pitch, Volume and Pan sliders, and the Speed slider of a cloud voice, now have a hundred places. **Left** and **Right** move 1 %, **Up** and **Down** 5 %, **Page Up** and **Page Down** 10 %. They moved 5 % a press before (the rate, pitch and pan had only twenty-one places). The shortcut keys for the rate, pitch and volume still move by their usual steps.
+- **The rate and pitch are finer.** They are now kept in units of 1 % (-50 to +50) instead of whole steps (-10 to +10), so the rate can be set exactly. Your saved rates, pitches, profiles and element styles are converted once, with the same sound as before. Preferences > Speech > Rate and Save as Audio > Rate use the new scale. SAPI 5 voices can only take whole steps, so they are given the nearest.
+- The pan is in 1 % places too (Left 1 % to Right 100 %).
+
 ## [2.57.0] - 2026-11-24
 
 ### Added
