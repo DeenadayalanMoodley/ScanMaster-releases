@@ -5,6 +5,17 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.54.2] - 2026-11-24
+
+### Added
+
+- **Choosing a voice effect plays the sample.** In Voice Effects and Element Effects, each time you choose Off or a preset for an effect, the sample sentence is spoken again with the effects as they now stand, so you hear what the preset sounds like before pressing OK.
+- **Rate, volume and pitch changed while reading are heard at once.** Reading renders a couple of pieces ahead, so a change made with Ctrl+], Ctrl+[ (rate), Ctrl+Shift+] and Ctrl+Shift+[ (volume), Ctrl+Alt+] and Ctrl+Alt+[ (pitch), or set exactly, used to be heard only after a long lag. Now, a quarter of a second after the last press (so a run of presses is one change), the reading starts again from the word being read with the new setting.
+
+### Fixed
+
+- **Speech > Pitch did nothing when reading.** It is now made on the audio of every piece read, up to four semitones either way, on top of a style's own pitch.
+
 ## [2.54.1] - 2026-11-23
 
 ### Fixed
