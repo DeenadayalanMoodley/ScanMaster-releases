@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.56.0] - 2026-11-24
+
+### Added
+
+- **Speech engines can now run as their own program from the add-on catalog.** An engine program is started when it is first needed, listed in Speech Settings, and spoken to over a pipe (protocol described in `catalogNGINE-HOSTS.md`). It is stopped before its add-on is installed again or removed.
+- **Kokoro is the first engine moved over.** Its speaking code is shared with a separate Kokoro program (`kokoro-host.exe`, listed with the Kokoro add-on in the catalog). Once the program is installed from the Plugin Manager (Kokoro, Install), Kokoro speaks through it; until then the built-in Kokoro keeps working exactly as before. The audio is the same.
+- Piper, Supertonic and Kokoro (with all 140 Piper voices) are now also listed in the signed catalog, so their files and voices can be updated without a release.
+
 ## [2.55.0] - 2026-11-24
 
 ### Added
