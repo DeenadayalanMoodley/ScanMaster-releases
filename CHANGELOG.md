@@ -5,6 +5,14 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.55.0] - 2026-11-24
+
+### Added
+
+- **The Plugin Manager's list no longer needs a new release.** New voices, models, tools and speech-engine hosts are published in a signed catalog (`catalog.json`, with its signature, on the releases page), and the Plugin Manager reads it each time it opens, in the background. The list is shown at once from the last good copy kept on your computer and brought up to date, with the add-on you had selected kept, when there is news. The catalog is signed with the release key: an unsigned or altered one is never used, nor one older than the copy already kept, and every file it names must have a pinned SHA-256, an https address and a path inside the add-on's folder. Entries of the catalog replace the ones built into the program that have the same id (a wrong address can be fixed without a release); the built-in list is still used without a network. Selecting an add-on shows its version and what it needs.
+- **The format has room for speech engines that are separate programs** (like Neural Voices): an entry of the `engine-host` kind names the host program and the pipe protocol it speaks, and programs older than an entry's `min_app_version` or protocol leave it out. Moving Kokoro, Piper or Supertonic out of the program is not done yet; this is the base for it.
+- Tools for whoever publishes: `scripts\publish-catalog.ps1` signs and uploads the catalog, and the `sign_update` tool gained `sign-catalog`, `verify-catalog`, `file-entry` (a file's JSON with its SHA-256) and `export-builtin`.
+
 ## [2.54.2] - 2026-11-24
 
 ### Added
