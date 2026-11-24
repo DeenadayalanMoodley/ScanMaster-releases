@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.56.1] - 2026-11-24
+
+### Fixed
+
+- **A portable copy's settings file now works in an installed copy.** Copying `scan_master.db` from a portable folder over the installed copy's file lost every API key (they read as blank), because portable copies protect them with a key kept inside the file and the installed copy only knew its own Windows protection. The installed copy now converts them when it opens such a file, so API keys and all other settings come across. Close ScanMaster, copy the file to `%LOCALAPPDATA%\ScanMaster\`, start it.
+
 ## [2.56.0] - 2026-11-24
 
 ### Added
