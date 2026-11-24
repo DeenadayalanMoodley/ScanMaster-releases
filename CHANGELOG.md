@@ -5,6 +5,18 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.57.0] - 2026-11-24
+
+### Added
+
+- **Supertonic speaks the language of the text.** It has 31 languages (English, Korean, Japanese, Arabic, Bulgarian, Czech, Danish, German, Greek, Spanish, Estonian, Finnish, French, Hindi, Croatian, Hungarian, Indonesian, Italian, Lithuanian, Latvian, Dutch, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Swedish, Turkish, Ukrainian and Vietnamese), but ScanMaster always told it the text was English. It now finds the language from the text, and a short text such as "Ja." keeps the language of the text before it.
+
+### Changed
+
+- **Neural Voices are slower at the normal rate.** The middle of the rate setting was +50 % of the voice's own speed, which was too fast; it is now +40 %. Each step up or down is the same size as before, so only the starting point moved.
+- **Kokoro, Piper and Supertonic are no longer part of ScanMaster.** Each is its own program that is installed with its add-on in the Plugin Manager and listed in the signed catalog, so an engine can be updated without a new ScanMaster. The audio is the same. An installation that already has the models gets the program by itself in the background when ScanMaster starts (the program only, not the models again); if that cannot be done (no network) the Plugin Manager install does it.
+- The engine programs may use any sample rate (Supertonic is 44.1 kHz): the protocol gained a rate frame (see `catalog/ENGINE-HOSTS.md`).
+
 ## [2.56.1] - 2026-11-24
 
 ### Fixed
@@ -15,7 +27,7 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ### Added
 
-- **Speech engines can now run as their own program from the add-on catalog.** An engine program is started when it is first needed, listed in Speech Settings, and spoken to over a pipe (protocol described in `catalogNGINE-HOSTS.md`). It is stopped before its add-on is installed again or removed.
+- **Speech engines can now run as their own program from the add-on catalog.** An engine program is started when it is first needed, listed in Speech Settings, and spoken to over a pipe (protocol described in `catalog/ENGINE-HOSTS.md`). It is stopped before its add-on is installed again or removed.
 - **Kokoro is the first engine moved over.** Its speaking code is shared with a separate Kokoro program (`kokoro-host.exe`, listed with the Kokoro add-on in the catalog). Once the program is installed from the Plugin Manager (Kokoro, Install), Kokoro speaks through it; until then the built-in Kokoro keeps working exactly as before. The audio is the same.
 - Piper, Supertonic and Kokoro (with all 140 Piper voices) are now also listed in the signed catalog, so their files and voices can be updated without a release.
 
