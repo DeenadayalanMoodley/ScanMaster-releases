@@ -5,6 +5,13 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.59.0] - 2026-11-24
+
+### Added
+
+- **PDFs that forbid copying or assistive technology now open fully.** A PDF with only an owner password asks readers to refuse copying and screen readers, but opens with no password. The text was already read from such files; their page pictures were not for the strongest encryption (AES-256), so a scanned one could not be OCR'd. The protection is now taken off in memory, so text, OCR, Docling and the cloud readers all work. Nothing is written to disk.
+- **PDFs with a password to open ask for it.** Pressing Import asks for the password (hidden as you type), asks again if it is wrong, and remembers it for that file until Scan Master closes. Before, such a file failed with a technical message and could not be opened at all. Passwords are never guessed or broken.
+
 ## [2.58.0] - 2026-11-24
 
 ### Changed
