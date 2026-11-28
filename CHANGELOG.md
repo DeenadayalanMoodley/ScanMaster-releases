@@ -5,6 +5,15 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.60.2] - 2026-11-28
+
+### Fixed
+
+- **LFM3 Audio installed as a Windows (SAPI 5) voice still mispronounced numbers and web addresses.** The fix in 2.60.1 reached only ScanMaster's own LFM3 Audio engine. The Windows voice now gets the same written-out text, in reading and in Save as Audio. Word highlighting still follows your own text.
+- **LFM3 Audio read telephone numbers as large numbers.** They are now said digit by digit, with a short pause between the parts, as SAPI's phone tag says them. This covers numbers starting with + or 0, the (555) 123-4567 pattern, and numbers after words such as "Tel", "Phone", "Fax" or "Call". Years, dates, amounts of money and ISBNs are left alone.
+- **LFM3 Audio read ISBNs as large numbers.** They are now said digit by digit in sets of three. This covers 10 or 13 digit numbers after "ISBN", and 13 digit numbers starting 978 or 979.
+- **Save as Audio ended without a word.** After a finished or cancelled export the progress window just closed. It now says where the audio was saved, or that the export was cancelled and no file was made (Cancel has the focus while exporting, so Space or Enter cancels). It also checks that the file is really there, and records the file name and the outcome in the log.
+
 ## [2.60.1] - 2026-11-28
 
 ### Fixed
