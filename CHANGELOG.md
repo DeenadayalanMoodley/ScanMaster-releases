@@ -5,6 +5,17 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.60.0] - 2026-11-28
+
+### Added
+
+- **Phonon speech engine.** 102 offline voices (English British, American and character voices, French, German, Spanish and Portuguese) from Gradium's Phonon model, run by ScanMaster's own engine program (`phonon-host`). Install **Phonon** in the Plugin Manager, then **Import engine** and pick your `phonon-*.nvda-addon` (the model is for non-commercial use only). It has the add-on's rate and pitch scales, rate boost, pause length, voice variation and graphics settings. Engine programs can now have their own settings and make their own pitch.
+- Engine programs added through the catalog now work in Speech Settings, Preferences and Save as Audio, with word highlighting.
+
+### Fixed
+
+- **Save as Audio and talking books made no files with some engines.** Speech Settings and Save as Audio listed Kokoro, Piper and Supertonic twice, the second time as engine programs. Choosing the second entry made Save as Audio fail with no file, because the export treated it as a Windows voice. The engines are listed once, the export speaks with every engine program, and an engine it cannot use is now reported by name instead of failing obscurely.
+
 ## [2.59.0] - 2026-11-24
 
 ### Added
