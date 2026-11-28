@@ -5,6 +5,12 @@ Dates use ISO 8601 (YYYY-MM-DD).
 
 ---
 
+## [2.60.1] - 2026-11-28
+
+### Fixed
+
+- **LFM3 Audio mispronounced numbers and web addresses.** LFM3 Audio reads plain text and guessed at these. Web and email addresses are now said as a screen reader says them ("w w w dot example dot com"), and in English, numbers, dates, times, money (including South African rand, R1,250.50) are written out as words before it reads them. Spanish, French, Italian and Portuguese get their numeric dates written out, and addresses are said in those languages, German and Dutch. This applies to reading aloud, Save as Audio and talking books.
+
 ## [2.60.0] - 2026-11-28
 
 ### Added
